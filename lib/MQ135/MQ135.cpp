@@ -52,7 +52,8 @@ float MQ135::getCorrectionFactor(float t, float h) {
 /**************************************************************************/
 float MQ135::getResistance() {
   int val = analogRead(_pin);
-  return ((1023./(float)val) * 5. - 1.)*RLOAD;
+  // Rsensor = Rload * (ADCmaxvalue/ADCvalue - 1)
+  return ((1023.0/(float)val) - 1.0) * RLOAD;
 }
 
 /**************************************************************************/

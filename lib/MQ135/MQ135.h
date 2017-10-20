@@ -21,11 +21,10 @@ v1.0 - First release
  #include "WProgram.h"
 #endif
 
-/// The load resistance on the board
-#define RLOAD 10.0
+/// The load resistance on the board (Kohms)
+#define RLOAD 0.973
 /// Calibration resistance at atmospheric CO2 level
-//#define RZERO 76.63
-#define RZERO 684.22
+#define RZERO 10.31
 /// Parameters for calculating ppm of CO2 from sensor resistance
 #define PARA 116.6020682
 #define PARB 2.769034857
